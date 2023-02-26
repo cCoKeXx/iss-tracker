@@ -12,6 +12,7 @@
     "react-map-gl": "^7.0.21",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
+    "webpack-loader": "^0.0.1",
     "worker-loader": "^3.0.8"
   },
   "scripts": {

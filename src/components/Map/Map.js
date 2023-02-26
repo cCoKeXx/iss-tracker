@@ -3,11 +3,9 @@ import MapGL, { Marker } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import ISS from "../../assets/Logo.png";
 
-import mapboxgl from 'mapbox-gl';
+import mapboxgl from "mapbox-gl";
 // eslint-disable-next-line import/no-webpack-loader-syntax
-mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
-
-
+import MapboxWorker from 'worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker';
 
 
 const Map = (props) => {
@@ -22,7 +20,7 @@ const Map = (props) => {
       }}
       style={{ width: "100%", height: "13rem", marginTop: "2rem" }}
       mapStyle="mapbox://styles/mapbox/streets-v9"
-      mapboxAccessToken="pk.eyJ1Ijoic3RlZmF2LWRldiIsImEiOiJjbGVrY2lucmYwazNrM3pucHV4aDVoc3EzIn0.fTCPTopqQxWaxpjmJHP4TQ"
+      mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
     >
       <Marker longitude={lng} latitude={lat} anchor="bottom">
         <img src={ISS} alt="iss" style={{ width: "60px" }} />
