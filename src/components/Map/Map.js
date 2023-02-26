@@ -14,7 +14,7 @@ const Map = (props) => {
         zoom: 0,
       }}
       style={{ width: "100%", height: "13rem", marginTop: "2rem" }}
-      mapStyle="mapbox://styles/mapbox/dark-v9"
+      mapStyle="mapbox://styles/mapbox/streets-v9"
       mapboxAccessToken="pk.eyJ1Ijoic3RlZmF2LWRldiIsImEiOiJjbGVrY2lucmYwazNrM3pucHV4aDVoc3EzIn0.fTCPTopqQxWaxpjmJHP4TQ"
     >
       <Marker longitude={lng} latitude={lat} anchor="bottom">
