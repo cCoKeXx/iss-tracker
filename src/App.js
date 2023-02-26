@@ -36,26 +36,28 @@ function App() {
     return () => clearInterval(interval);
   }, [fetchIssInfoHandler]);
 
-  let content = <p>No info.</p>;
+  let content = "No information! Something went wrong!";
   if (error) {
-    content = <p>{error}</p>;
+    content = { error };
   } else if (info) {
     content = "";
   }
 
   return (
     <div className="App">
-      {content}
-      <div className="card">
-        {info && <h1 className="title">{info.name.toUpperCase()}</h1>}
-        <div className="card__top">
-          {info && <Info info={info} fetchData={fetchIssInfoHandler} />}
-          <img src={Logo} alt="Iss" className="image" />
+      <p className="error_message">{content}</p>
+      {info && (
+        <div className="card">
+          <h1 className="title">{info.name.toUpperCase()}</h1>
+          <div className="card__top">
+            <Info info={info} fetchData={fetchIssInfoHandler} />
+            <img src={Logo} alt="Iss" className="image" />
+          </div>
+          <div className="card__bottom">
+            <Map info={info} />
+          </div>
         </div>
-        <div className="card__bottom">
-          {info && <Map info={info}/>}
-        </div>
-      </div>
+      )}
     </div>
   );
 }

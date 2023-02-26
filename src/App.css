@@ -30,6 +30,12 @@
 .card__bottom {
   width: 100%;
 }
+.error_message {
+  color: rgb(179, 49, 49);
+  background-color: rgba(219, 219, 219, 0.9);
+  font-size: 2rem;
+  font-weight: 700;
+}
 .image {
   width: 40vw;
   max-width: 20rem;
