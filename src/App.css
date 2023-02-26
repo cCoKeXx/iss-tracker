@@ -1,0 +1,44 @@
+.App {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  background-image: url("./assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  margin: 2rem;
+  border-radius: 2rem;
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(219, 219, 219, 0.9);
+}
+
+.card__top {
+  flex-wrap: wrap-reverse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+}
+.card__bottom {
+  width: 100%;
+}
+.image {
+  width: 40vw;
+  max-width: 20rem;
+  min-width: 10rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .card {
+    padding: 2rem 1rem;
+    margin: 1rem;
+  }
+}
