@@ -3,6 +3,13 @@ import MapGL, { Marker } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import ISS from "../../assets/Logo.png";
 
+import mapboxgl from 'mapbox-gl';
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
+
+
+
+
 const Map = (props) => {
   let lng = props.info.longitude.toFixed(4);
   let lat = props.info.latitude.toFixed(4);
